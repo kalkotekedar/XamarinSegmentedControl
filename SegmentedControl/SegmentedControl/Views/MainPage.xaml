@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SegmentedControl.Views.MainPage"
+             xmlns:control="clr-namespace:SegmentedControl.Controls"
+             Title="{Binding Title}">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <control:SCControl ValueChanged="SegmentedValueChanged">
+            <control:SCControl.Children>
+                <control:SegmentedControlOption x:Name="option_male" Text="One" IsChecked="{Binding Male}" />
+                <control:SegmentedControlOption x:Name="option_female" Text="Two" IsChecked="{Binding Female}" />
+            </control:SCControl.Children>
+        </control:SCControl>
+
+        <control:SCControl ValueChanged="SegmentedValueChanged" Margin="0,20,0,0">
+            <control:SCControl.Children>
+                <control:SegmentedControlOption x:Name="option_one" Text="One" IsChecked="{Binding OptionOne}" />
+                <control:SegmentedControlOption x:Name="option_two" Text="Two" IsChecked="{Binding OptionTwo}" />
+                <control:SegmentedControlOption x:Name="option_three" Text="Three" IsChecked="{Binding OptionThree}" />
+            </control:SCControl.Children>
+        </control:SCControl>
+    </StackLayout>
+
+</ContentPage>
